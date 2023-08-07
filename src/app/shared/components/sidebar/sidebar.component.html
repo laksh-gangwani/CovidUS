@@ -1,0 +1,21 @@
+<nav class="sidebar">
+    <div class="logo">
+        <a [routerLink]="'summary'">
+            <img src="../../../../assets/images/Coronavirus.jpg" alt="Logo" />
+        </a>
+    </div>
+
+    <div class="navigation">
+        <ul class="list-unstyled">
+            <li [routerLink]="'summary'" routerLinkActive="active">
+                <a>Summary</a>
+            </li>
+            <li [routerLink]="'state'" routerLinkActive="active">
+                <a>By State</a>
+            </li>
+            <li [routerLink]="'live'" routerLinkActive="active">
+                <a>Live</a>
+            </li>
+        </ul>
+    </div>
+</nav>

@@ -1,0 +1,4 @@
+<app-summary-cards [covidData]="covidData"></app-summary-cards>
+<app-top-states [covidStateData]="covidStateData"></app-top-states>
+<app-confirmed-by-states (state)="searchState($event)"></app-confirmed-by-states>
+<app-state-chart [state]="stateToSearch"></app-state-chart>

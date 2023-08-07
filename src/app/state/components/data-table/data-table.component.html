@@ -1,0 +1,26 @@
+<div class="row mt-5">
+    <div class="col">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">State</th>
+                    <th scope="col">Positive Cases</th>
+                    <th scope="col">Negative Cases</th>
+                    <th scope="col">Deaths</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr *ngFor="let state of states; let i = index">
+                    <th scope="row">{{ i+1 }}</th>
+                    <td>{{state?.state}}</td>
+                    <td>{{state?.positive | number }}</td>
+                    <td>{{state?.negative | number }}</td>
+                    <td>{{state?.death | number }}</td>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+</div>

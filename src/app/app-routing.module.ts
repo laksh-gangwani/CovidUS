@@ -1,7 +1,25 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-const routes: Routes = [];
+const routes: Routes = [
+  {
+    path: '',
+    redirectTo: 'summary',
+    pathMatch: 'full'
+  },
+  {
+    path: 'summary',
+    loadChildren: () => import('./summary/summary.module').then(m => m.SummaryModule)
+  },
+  {
+    path: 'state',
+    loadChildren: () => import('./state/state.module').then(m => m.StateModule)
+  },
+  {
+    path: 'live',
+    loadChildren: () => import('./live/live.module').then(m => m.LiveModule)
+  }
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
